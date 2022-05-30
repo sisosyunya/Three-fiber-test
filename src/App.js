@@ -12,8 +12,6 @@ const Rig = ({v=new Vector3()}) => {
   })
 }
 
-
-
 function Images() {
   //   // 現在スクロールしている位置を取得
   const { width, height } = useThree((state) => state.viewport);
