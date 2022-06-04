@@ -16,11 +16,9 @@ function Mousemove(){
 
     return(
         <mesh ref={ref} castShadow>
-            {/* <dodecahedronBufferGeometry  attach="geometry" /> */}
-            {/* <Box color={"red"} />
-             */}
-            
-            {/* <meshBasicMaterial attach="material"/> */}
+            <dodecahedronBufferGeometry  attach="geometry" />
+            {/* <Box color={"red"} /> */}
+            <meshBasicMaterial attach="material" color={"red"}/>
         </mesh>
     )
 }
