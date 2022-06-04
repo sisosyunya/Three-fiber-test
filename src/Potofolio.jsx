@@ -22,9 +22,11 @@ function Info() {
       <Text position={[-3, -height+1.5, 0]} fontSize={1.5}>2002/07/10</Text>
       <Text position={[-5.5, -height-1, 0]} fontSize={2} color={"black"}>From</Text>
       <Text position={[-3, -height-3, 0]} fontSize={2} color={"black"}>Osaka</Text>
+      <Text position={[0, -height*2, 0]} fontSize={4} color={"black"}>Food</Text>
     </>
   )
 }
+
 
 function Images() {
   // useThreeで現在のサイズをもらえる
@@ -33,12 +35,19 @@ function Images() {
   const data = useScroll();
   useFrame(() => {
     group.current.children[0].material.zoom = 1 + data.range(0, 1, 0.1);
+    group.current.children[2].material.zoom = 2 - data.range(0, 1/2, 0.1);
+    group.current.children[3].material.zoom = 2 - data.range(0, 1/2, 0.1);
   }
   )
   return (
     <group ref={group}>
       <Image url="./gakkousyunya.jpg" scale={[width/1.5, height/1.5, 1]} position={[2.5, 2,-1]} />
       <Image url="./kakkoii.jpg" scale={[width/2, height, 1]} position={[5.5, -height-1, -1]} />
+
+      <Image url="./delta.jpg" scale={[width/2.5, height/2.5, 1]} position={[-4,-height*2.5-1,1]} />
+      <Image url="./okonomi.jpg" scale={[width/2.5, height/2, 1]} position={[5.5, -height*2.5-3,-1]} />
+      {/* <Image url="./akafuku.jpg" scale={[width/2, height/2, 1]} position={[-5, -height*3.2,-1]} /> */}
+      <Image url="./tonkatu.jpg" scale={[width/2, height/2, 1]} position={[7, -height*3.5,1]} />
     </group>
   );
 }
