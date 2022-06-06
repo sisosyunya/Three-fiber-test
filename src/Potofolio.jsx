@@ -46,7 +46,7 @@ function Images() {
 
       <Image url="./delta.jpg" scale={[width/2.5, height/2.5, 1]} position={[-4,-height*2.5-1,1]} />
       <Image url="./okonomi.jpg" scale={[width/2.5, height/2, 1]} position={[5.5, -height*2.5-3,-1]} />
-      {/* <Image url="./akafuku.jpg" scale={[width/2, height/2, 1]} position={[-5, -height*3.2,-1]} /> */}
+      <Image url="./akafuku.jpg" scale={[width/2, height/2, 1]} position={[-5, -height*3.2,-1]} />
       <Image url="./tonkatu.jpg" scale={[width/2, height/2, 1]} position={[7, -height*3.5,1]} />
     </group>
   );
@@ -75,9 +75,9 @@ function App() {
           >
             <Rig />
             <Scroll>
-              <Text position={[width-4, 5, 0]} fontSize={2} color="black">About</Text>
-              <Text position={[width-2, 3.5, -1]} fontSize={2} color="#6b778a">Fujisawa</Text>
-              <Text position={[width-2.5, 2, -1]} fontSize={2} color="#6b778a">Syunya</Text>
+              <Text position={[width-5.8, 5, 2]} fontSize={2} color="white">About</Text>
+              <Text position={[width-5, 3.5, 1]} fontSize={2} color="white">Fujisawa</Text>
+              <Text position={[width-4.5, 1.5, 1]} fontSize={2} color="white">Syunya</Text>
             </Scroll>
             <Scroll>
               <Images />
