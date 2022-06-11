@@ -5,6 +5,8 @@ import './App2.css';
 import { config, useSpring, animated } from "@react-spring/three"
 import { Text, Image, useScroll, ScrollControls, Scroll, PresentationControls } from '@react-three/drei';
 import Mousemove from './Mousemove';
+import { OrbitControls, Bounds, BakeShadows } from '@react-three/drei'
+
 
 const Rig = ({ v = new Vector3() }) => {
   return useFrame((state) => {
@@ -41,6 +43,17 @@ function Images() {
   )
   return (
     <group ref={group}>
+        <OrbitControls
+        makeDefault
+        // minAzimuthAngle={0}
+        // maxAzimuthAngle={1}
+        // minPolarAngle={1}
+        // maxPolarAngle={1}
+        // enableZoom={true}
+        // enablePan={true}
+        // zoomSpeed={0.3}
+      />
+
       <Image url="./gakkousyunya.jpg" scale={[width/1.5, height/1.5, 1]} position={[2.5, 2,-1]} />
       <Image url="./kakkoii.jpg" scale={[width/2, height, 1]} position={[5.5, -height-1, -1]} />
 
